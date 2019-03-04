@@ -1,0 +1,16 @@
+/* A media query allows you to go between
+two style sheets */
+
+
+
+.container {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.birthday img{
+	border-radius: 0;
+}
+
+
