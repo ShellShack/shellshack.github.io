@@ -1,0 +1,56 @@
+body {
+	background-image: url("../images/math.jpg");
+	color: orange;
+}
+
+#mathGame {
+	margin: 200px 0 0 480px ;
+
+}
+
+.mathInput {
+	width: 54px;
+	text-align: center;
+}
+
+.mathRow {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+.mathDiv {
+	height: 100px;
+	width: 200px;
+}
+
+.mathP {
+	padding: 0;
+	margin: 0;
+	margin: 0px 0px 0px 2px;
+
+}
+
+.ocean {
+	width: 200px;
+	height: 100px;
+	padding: 0;
+	margin: 0;
+}
+
+.mathButton {
+  border-radius: 2px;
+  background-color: orangered;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  padding: 1px;
+  width: 58px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.mathButton:hover {
+	background-color: orange;
+}
