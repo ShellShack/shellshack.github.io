@@ -1,55 +1,411 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Happy Birthday Mel!</title>
-    <meta name="description" content="Happy Birthday Mel!">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/small.css" media="(max-width: 650px)">
-    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body style="background-image:url(Images/confetti.jpg" alt="confetti)">
-  	<div class="container">
-  		<section class="birthday">
-  			<img src="Images/candles.jpg" alt ="candles">
-  		</section><!--birhday-->
-      <section class="shandy">
-  			<img src="Images/shandy.jpg" alt="shandy" style="float:right; width:8rem; height:8rem";>
-  			<img src="Images/shandy.jpg" alt="shandy" style="float:left; width: 8rem; height: 8rem";>
-      </section>
+<head>
+	<title>Math Quiz</title>
+	<link rel="stylesheet" type="text/css" href="css/mathquiz.css">
+</head>
+<body>
+		<div id="mathGame">
+			<div id="firstRow" class="mathRow">
+					<div id="divC" class="mathDiv">
+					<p id="variableC" class="mathP"></p>
+					<input type="text" id="answerC" class="mathInput" value="" /></br>
+					<button onclick="submitC()" id="buttonC" class="mathButton"><span>Submit </span></button></div>
 
-  		<section class="Main">
-  			<h1>Mel's Birthday!</h1>
-  			<img src="Images/bruno2.jpg" alt="bruno2">
-  			<p>Get ready to shake your Shandy Cans (please don't actually) as we celebrate another year of Mel! </p>
-  			<p>This year we will be celebrating Mel's birthday at Seven Hills Tavern this Friday, March 8th!</p>
- 
-  		</section><!--Main-->
+					<div id="divG" class="mathDiv">
+					<p id="variableG" class="mathP"></p>
+					<input type="text" id="answerG" class="mathInput" value="" /></br>
+					<button onclick="submitG()" id="buttonG" class="mathButton">Submit</button></div>
 
-  		<aside class="pineapple"><img src="Images/Pineapple.jpg" alt="pineapple">
-  		</aside> <!--pineapple-->
-  		<section class="address">
-  		<p><address>Seven Hills Tavern<br>
-  					 7265 Broadview Rd<br>
-  					 Seven Hills, OH 44131</address></p>
-  		</section><!--address-->
-  		<section class="oscar">
-  			<img src="Images/oscar.jpg" alt="oscar">
-  			<h2>Directions:</h2>
-  			<p style="padding: 15px">If you have to ask you're not invited</p>
-  			
-  		</section><!--list-->
+					<div id="divK" class="mathDiv">
+					<p id="variableK" class="mathP"></p>
+					<input type="text" id="answerK" class="mathInput" value="" /></br>
+					<button onclick="submitK()" id="buttonK" class="mathButton">Submit</button></div>
 
-  		<section class="footer">
-  			<p>Created by Jason Shell</p>
-  		</section><!--footer-->
-  	</div><!--Container-->
+			</div><!--firstRow-->
+			<div id="secondRow" class="mathRow">
 
-  </body>
+					<div id="divD" class="mathDiv">
+					<p id="variableD" class="mathP"></p>
+					<input type="text" id="answerD" class="mathInput" value="" /></br>
+					<button onclick="submitD()" id="buttonD" class="mathButton">Submit</button></div>
+
+
+					<div id="divH" class="mathDiv">
+					<p id="variableH" class="mathP"></p>
+					<input type="text" id="answerH" class="mathInput" value="" /></br>
+					<button onclick="submitH()" id="buttonH" class="mathButton">Submit</button></div>
+
+					<div id="divL" class="mathDiv">
+					<p id="variableL" class="mathP"></p>
+					<input type="text" id="answerL" class="mathInput" value="" /></br>
+					<button onclick="submitL()" id="buttonL" class="mathButton">Submit</button></div>
+
+			</div><!--secondRow-->
+			<div id="thirdRow" class="mathRow">
+
+					<div id="divE" class="mathDiv">
+					<p id="variableE" class="mathP"></p>
+					<input type="text" id="answerE" class="mathInput" value="" /></br>
+					<button onclick="submitE()" id="buttonE" class="mathButton">Submit</button></div>
+
+					<div id="divI" class="mathDiv">
+					<p id="variableI" class="mathP"></p>
+					<input type="text" id="answerI" class="mathInput" value="" /></br>
+					<button onclick="submitI()" id="buttonI" class="mathButton">Submit</button></div>
+			
+
+					<div id="divM" class="mathDiv">
+					<p id="variableM" class="mathP"></p>
+					<input type="text" id="answerM" class="mathInput" value="" /></br>
+					<button onclick="submitM()" id="buttonM" class="mathButton">Submit</button></div>
+
+			</div><!--thirdRow-->
+			<div id="fourthRow" class="mathRow">
+
+					<div id="divF" class="mathDiv">
+					<p id="variableF" class="mathP"></p>
+					<input type="text" id="answerF" class="mathInput" value="" /></br>
+					<button onclick="submitF()" id="buttonF" class="mathButton">Submit</button></div>
+
+					<div id="divJ" class="mathDiv">
+					<p id="variableJ" class="mathP"></p>
+					<input type="text" id="answerJ" class="mathInput" value="" /></br>
+					<button onclick="submitJ()" id="buttonJ" class="mathButton">Submit</button></div>
+
+					<div id="divN" class="mathDiv">
+					<p id="variableN" class="mathP"></p>
+					<input type="text" id="answerN" class="mathInput" value="" /></br>
+					<button onclick="submitN()" id="buttonN" class="mathButton">Submit</button></div>
+			</div><!--fourthRow-->
+		</div><!--mathGame-->
+
+</body>
+<script type="text/javascript">
+
+		var minimum = 1;
+		var maximum = 100;
+		var intC1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intC2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var intD1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intD2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var intE1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intE2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var intF1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intF2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var intG1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intG2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var intH1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intH2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var intI1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intI2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var intJ1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intJ2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var intK1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intK2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var intL1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intL2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var intM1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intM2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var intN1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		var intN2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+		var inputC = document.getElementById("answerC");
+
+		var inputD = document.getElementById("answerD");
+
+		var inputE = document.getElementById("answerE");
+
+		var inputF = document.getElementById("answerF");
+
+		var inputG = document.getElementById("answerG");
+
+		var inputH = document.getElementById("answerH");
+
+		var inputI = document.getElementById("answerI");
+
+		var inputJ = document.getElementById("answerJ");
+
+		var inputK = document.getElementById("answerK");
+
+		var inputL = document.getElementById("answerL");
+
+		var inputM = document.getElementById("answerM");
+
+		var inputN = document.getElementById("answerN");
+
+		inputC.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonC").click()
+			}
+		});
+
+		inputD.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonD").click()
+			}
+		});
+
+		inputE.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonE").click()
+			}
+		});
+
+		inputF.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonF").click()
+			}
+		});
+
+		inputG.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonG").click()
+			}
+		});
+
+
+		inputH.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonH").click()
+			}
+		});
+
+
+		inputI.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonI").click()
+			}
+		});
+
+
+		inputJ.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonJ").click()
+			}
+		});
+
+
+		inputK.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonK").click()
+			}
+		});
+
+
+		inputL.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonL").click()
+			}
+		});
+
+
+		inputM.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonM").click()
+			}
+		});
+
+
+		inputN.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("buttonN").click()
+			}
+		});
+
+
+		document.getElementById('variableC').innerHTML = intC1 + " " + "+" + " " + intC2;
+			var canswer = intC1 + intC2;
+
+		document.getElementById('variableD').innerHTML = intD1 + " " + "+" + " " + intD2;
+			var danswer = intD1 + intD2;
+
+		document.getElementById('variableE').innerHTML = intE1 + " " + "+" + " " + intE2;
+			var eanswer = intE1 + intE2;
+
+		document.getElementById('variableF').innerHTML = intF1 + " " + "+" + " " + intF2;
+			var fanswer = intF1 + intF2;
+
+		document.getElementById('variableG').innerHTML = intG1 + " " + "+" + " " + intG2;
+			var ganswer = intG1 + intG2;
+
+		document.getElementById('variableH').innerHTML = intH1 + " " + "+" + " " + intH2;
+			var hanswer = intH1 + intH2;	
+
+		document.getElementById('variableI').innerHTML = intI1 + " " + "+" + " " + intI2;
+			var ianswer = intI1 + intI2;
+
+		document.getElementById('variableJ').innerHTML = intJ1 + " " + "+" + " " + intJ2;
+			var janswer = intJ1 + intJ2;	
+
+		document.getElementById('variableK').innerHTML = intK1 + " " + "+" + " " + intK2;
+			var kanswer = intK1 + intK2;
+
+		document.getElementById('variableL').innerHTML = intL1 + " " + "+" + " " + intL2;
+			var lanswer = intL1 + intL2;
+
+		document.getElementById('variableM').innerHTML = intM1 + " " + "+" + " " + intM2;
+			var manswer = intM1 + intM2;
+
+		document.getElementById('variableN').innerHTML = intN1 + " " + "+" + " " + intN2;
+			var nanswer = intN1 + intN2;
+
+		function submitC() {
+			var sumbitAnswerC = document.getElementById('answerC').value;
+			if(sumbitAnswerC == canswer) {
+				variableC.innerHTML = "<img src='images/oceanC.png' class='ocean'>";
+				variableC.parentNode.removeChild(answerC);
+				variableC.parentNode.removeChild(buttonC);
+				} else variableC.innerHTML = "<img src='images/toxicC.png' class='technicsN'>";
+						variableC.parentNode.removeChild(answerC);
+						variableC.parentNode.removeChild(buttonC);
+		}
+
+		function submitD() {
+			var sumbitAnswerD = document.getElementById('answerD').value;
+			if(sumbitAnswerD == danswer) {
+				variableD.innerHTML = "<img src='images/oceanD.png' class='ocean'>";
+				variableD.parentNode.removeChild(answerD);
+				variableD.parentNode.removeChild(buttonD);
+				} else variableD.innerHTML = "<img src='images/toxicD.png' class='technicsN'>";
+				variableD.parentNode.removeChild(answerD);
+				variableD.parentNode.removeChild(buttonD);
+		}
+
+		function submitE() {
+			var sumbitAnswerE = document.getElementById('answerE').value;
+			if(sumbitAnswerE == eanswer) {
+				variableE.innerHTML = "<img src='images/oceanE.png' class='ocean'>";
+				variableE.parentNode.removeChild(answerE);
+				variableE.parentNode.removeChild(buttonE);
+				} else variableE.innerHTML = "<img src='images/toxicE.png' class='technicsN'>";
+				variableE.parentNode.removeChild(answerE);
+				variableE.parentNode.removeChild(buttonE);
+		}
+
+		function submitF() {
+			var sumbitAnswerF = document.getElementById('answerF').value;
+			if(sumbitAnswerF == fanswer) {
+				variableF.innerHTML = "<img src='images/oceanF.png' class='ocean'>";
+				variableF.parentNode.removeChild(answerF);
+				variableF.parentNode.removeChild(buttonF);
+				} else variableF.innerHTML = "<img src='images/toxicF.png' class='technicsN'>";
+				variableF.parentNode.removeChild(answerF);
+				variableF.parentNode.removeChild(buttonF);
+		}
+
+		function submitG() {
+			var sumbitAnswerG = document.getElementById('answerG').value;
+			if(sumbitAnswerG == ganswer) {
+				variableG.innerHTML = "<img src='images/oceanG.png' class='ocean'>";
+				variableG.parentNode.removeChild(answerG);
+				variableG.parentNode.removeChild(buttonG);
+				} else variableG.innerHTML = "<img src='images/toxicG.png' class='technicsN'>";
+				variableG.parentNode.removeChild(answerG);
+				variableG.parentNode.removeChild(buttonG);
+		}
+
+		function submitH() {
+			var sumbitAnswerH = document.getElementById('answerH').value;
+			if(sumbitAnswerH == hanswer) {
+				variableH.innerHTML = "<img src='images/oceanH.png' class='ocean'>";
+				variableH.parentNode.removeChild(answerH);
+				variableH.parentNode.removeChild(buttonH);
+				} else variableH.innerHTML = "<img src='images/toxicH.png' class='technicsN'>";
+				variableH.parentNode.removeChild(answerH);
+				variableH.parentNode.removeChild(buttonH);
+		}
+
+
+		function submitI() {
+			var sumbitAnswerI = document.getElementById('answerI').value;
+			if(sumbitAnswerI == ianswer) {
+				variableI.innerHTML = "<img src='images/oceanI.png' class='ocean'>";
+				variableI.parentNode.removeChild(answerI);
+				variableI.parentNode.removeChild(buttonI);
+				} else variableI.innerHTML = "<img src='images/toxicI.png' class='technicsN'>";
+				variableI.parentNode.removeChild(answerI);
+				variableI.parentNode.removeChild(buttonI);
+		}
+
+		function submitJ() {
+			var sumbitAnswerJ = document.getElementById('answerJ').value;
+			if(sumbitAnswerJ == janswer) {
+				variableJ.innerHTML = "<img src='images/oceanJ.png' class='ocean'>";
+				variableJ.parentNode.removeChild(answerJ);
+				variableJ.parentNode.removeChild(buttonJ);
+				} else variableJ.innerHTML = "<img src='images/toxicJ.png' class='technicsN'>";
+				variableJ.parentNode.removeChild(answerJ);
+				variableJ.parentNode.removeChild(buttonJ);
+		};
+
+		function submitK() {
+			var sumbitAnswerK = document.getElementById('answerK').value;
+			if(sumbitAnswerK == kanswer) {
+				variableK.innerHTML = "<img src='images/oceanK.png' class='ocean'>";
+				variableK.parentNode.removeChild(answerK);
+				variableK.parentNode.removeChild(buttonK);
+				} else variableK.innerHTML = "<img src='images/toxicK.png' class='technicsN'>";
+				variableK.parentNode.removeChild(answerK);
+				variableK.parentNode.removeChild(buttonK);
+		};
+
+		function submitL() {
+			var sumbitAnswerL = document.getElementById('answerL').value;
+			if(sumbitAnswerL == lanswer) {
+				variableL.innerHTML = "<img src='images/oceanL.png' class='ocean'>";
+				variableL.parentNode.removeChild(answerL);
+				variableL.parentNode.removeChild(buttonL);
+				} else variableL.innerHTML = "<img src='images/toxicL.png' class='technicsN'>";
+				variableL.parentNode.removeChild(answerL);
+				variableL.parentNode.removeChild(buttonL);
+		};
+
+		function submitM() {
+			var sumbitAnswerM = document.getElementById('answerM').value;
+			if(sumbitAnswerM == manswer) {
+				variableM.innerHTML = "<img src='images/oceanM.png' class='ocean'>";
+				variableM.parentNode.removeChild(answerM);
+				variableM.parentNode.removeChild(buttonM);
+				} else variableM.innerHTML = "<img src='images/toxicM.png' class='technicsN'>";
+				variableM.parentNode.removeChild(answerM);
+				variableM.parentNode.removeChild(buttonM);
+		};
+
+		function submitN() {
+			var sumbitAnswerN = document.getElementById('answerN').value;
+			if(sumbitAnswerN == nanswer) {
+				variableN.innerHTML = "<img src='images/oceanN.png' class='ocean'>";
+				variableN.parentNode.removeChild(answerN);
+				variableN.parentNode.removeChild(buttonN);
+				} else variableN.innerHTML = "<img src='images/toxicN.png' class='technicsN'>";
+				variableN.parentNode.removeChild(answerN);
+				variableN.parentNode.removeChild(buttonN);
+		};
+
+
+</script>
 </html>
-
-
-
-
