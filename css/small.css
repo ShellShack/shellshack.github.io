@@ -1,35 +1,18 @@
-/* A media query allows you to go between
-two style sheets */
-
-
-
-.container {
-	width: 100%;
+#mathGame {
 	margin: 0;
-	padding: 0;
 }
 
-h1 {
-	font-size: 4rem;
-	padding: 0 0 0 2rem;
-
+.mathDiv {
+	margin: 0;
+	width: 145px;
 }
 
-.Main img{
-
+.ocean {
+	width: 145px;
+	height: 100px;
 }
 
-.shandy img{
-	width: 2rem; 
-	height: 2rem;
-}
-
-.directions {
-	padding: 13px;
-}
-
-.oscar img {
-	float: left; 
-	width: 10rem; 
-	height: 10rem;
+.technicsN {
+	width: 145px;
+	height: 100px;
 }
